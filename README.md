@@ -1,14 +1,12 @@
 # Structural Verification of a 1 Tonne Mobile Floor Jib Crane
 
-<!-- ============================================================= -->
-<!-- HEADER IMAGE                                                   -->
-<!-- Source: JIB_CRANE\JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_01_Free_Body_Geometry.png -->
-<!-- Repo path: figures/wheels/fig_01_Free_Body_Geometry.png        -->
-<!-- ============================================================= -->
+<img width="1628" height="938" alt="fig_01_Free_Body_Geometry" src="https://github.com/user-attachments/assets/34c39217-b18e-46ab-9caf-e08b353781bc" />
+<img width="4963" height="3509" alt="5" src="https://github.com/user-attachments/assets/0ef23d3b-7104-4e8b-b5dc-b1bb9a6016ca" />
+<img width="4963" height="3509" alt="4" src="https://github.com/user-attachments/assets/e7478a85-333e-4adf-b875-784cef9fe1b7" />
+<img width="4963" height="3509" alt="3" src="https://github.com/user-attachments/assets/254a855e-2367-4519-8681-50982ec38a64" />
+<img width="1920" height="1080" alt="2" src="https://github.com/user-attachments/assets/8027f2ad-45db-4e66-bbd7-fa287d8af468" />
+<img width="792" height="956" alt="Floor mobile jib crane " src="https://github.com/user-attachments/assets/b10c2c9a-10cb-4154-960b-9ef73b7a2305" />
 
-<!-- ![1 Tonne Mobile Floor Jib Crane](figures/wheels/fig_01_Free_Body_Geometry.png) -->
-
-> _Attach header image above — from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_01_Free_Body_Geometry.png` (or a product render)._
 
 Independent structural verification of a 1 tonne mobile floor jib crane against its rated load chart, built on a single parametric MATLAB script that runs two independent methods in parallel: closed-form hand calculation to Eurocode 3 and EN 13001, and a from-scratch two-dimensional frame finite element solver. The study covers the crane on its wheels, the crane on deployed outriggers, a theoretical elastic-versus-plastic capacity check of the governing column, and a separate re-rating of the chart to what the structure safely carries.
 
@@ -23,21 +21,6 @@ The project combines:
 - A material reassessment from nominal S275 to client-confirmed Q235
 
 to answer one question for the client: can the structure safely support its rated 1 tonne chart, and with what margin.
-
----
-
-## Where the Figures Come From
-
-All figures are produced by the MATLAB scripts into a dated `verification_outputs_*` subfolder inside each script-version folder. The **wheels-only** run and the **deployed-outrigger** run write the same filenames (`fig_01` … `fig_10`, `crane_animation`), so they are kept apart in this repository.
-
-| Repo folder | Source folder \ subfolder | Used for |
-|---|---|---|
-| `figures/wheels/` | `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\` | Wheels-only and combined-verification sections |
-| `figures/deployed/` | `JIB_CRANE_C2_v3\verification_outputs_20260613_150046\` | Deployed-outrigger sections |
-
-Copy the figures from those two source subfolders into `figures/wheels/` and `figures/deployed/` respectively, then uncomment the `![ ]( )` line under each image slot. The full file-by-file map is in the [Figure Index](#figure-index) at the end.
-
-> Note on filenames: the latest runs (C1_v3 and C2_v3) name `fig_02 = Boom_BMD_Track_1` and `fig_03 = Track_2_Deformed_Shape`. The earliest wheels run (`JIB_CRANE_C1\verification_outputs_20260527_200459`) had those two swapped (`fig_02 = Track_2_Deformed_Shape`, `fig_03 = Boom_BMD_Track_1`); use the C1_v3 run to match this README.
 
 ---
 
@@ -169,11 +152,9 @@ Far    300 kg: M =  3.68 kN x 3.300 m = 12.14 kN.m
 
 The governing case is not the heaviest lift. It is the 700 kg load held out at 2320 mm. The column, the base weld, the boom outer section and the stability check are all worst at this point. An operator who treats the lighter mid-reach lift as the safer one is mistaken.
 
-<!-- IMAGE SLOT — Rated load chart -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_05_Load_Chart.png -->
-<!-- ![Rated load chart](figures/wheels/fig_05_Load_Chart.png) -->
 
-> _Attach `figures/wheels/fig_05_Load_Chart.png` — from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_05_Load_Chart.png` (rated load chart with the safe operating envelope shaded)._
+> <img width="1518" height="963" alt="fig_05_Load_Chart" src="https://github.com/user-attachments/assets/5611bd6e-e203-4f8c-b7cb-262a14b3b408" />
+ — rated load chart with the safe operating envelope shaded.
 
 ---
 
@@ -209,13 +190,9 @@ Pressure required = 57.49 kN / 1963 mm^2 = 29.3 MPa (293 bar)
 (a 30 mm bore would need 813 bar -> confirms 50 mm bore is the luffer)
 ```
 
-<!-- IMAGE SLOTS — Free body + wheel reactions -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_01_Free_Body_Geometry.png -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_06_Wheel_Reactions.png -->
-<!-- ![Free body at the governing case](figures/wheels/fig_01_Free_Body_Geometry.png) -->
-<!-- ![Wheel reactions and outrigger-arm stress](figures/wheels/fig_06_Wheel_Reactions.png) -->
-
-> _Attach `figures/wheels/fig_01_Free_Body_Geometry.png` and `figures/wheels/fig_06_Wheel_Reactions.png` — both from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\` (free body at 700 kg @ 2320 mm; wheel reactions left, outrigger-arm stress profile right)._
+<img width="1649" height="929" alt="fig_06_Wheel_Reactions" src="https://github.com/user-attachments/assets/df12d544-6234-4e21-b90c-cf51d16cba13" />
+<img width="1628" height="938" alt="fig_01_Free_Body_Geometry" src="https://github.com/user-attachments/assets/76f0bfc4-08e1-4c8b-84c2-c63f861968ba" />
+ (free body at 700 kg @ 2320 mm; wheel reactions left, outrigger-arm stress profile right).
 
 ---
 
@@ -318,13 +295,9 @@ Outrigger weld      (6 mm fillet)   sigma = 155.0 MPa   FoS = 1.29 -> Fail
 
 Eight of the fourteen structural and mechanical checks fall short of target on a working-stress basis, and both stability checks fall short as well.
 
-<!-- IMAGE SLOTS — Boom bending / stress, FoS summary -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_02_Boom_BMD_Track_1.png -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_08_FoS_Summary.png -->
-<!-- ![Boom bending moment](figures/wheels/fig_02_Boom_BMD_Track_1.png) -->
-<!-- ![Factor of safety summary](figures/wheels/fig_08_FoS_Summary.png) -->
+<img width="1904" height="1032" alt="fig_08_FoS_Summary" src="https://github.com/user-attachments/assets/79b27e02-e439-4ec1-aabb-cad743a7af46" />
+<img width="1649" height="963" alt="fig_02_Boom_BMD_Track_1" src="https://github.com/user-attachments/assets/28988bc3-cfe1-4d95-b4f4-0f3b27ee8b5a" />
 
-> _Attach `figures/wheels/fig_02_Boom_BMD_Track_1.png` and `figures/wheels/fig_08_FoS_Summary.png` — both from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\`._
 
 ---
 
@@ -346,11 +319,8 @@ Overturning balance about the front wheel line
 
 Worst stability factor 0.96 at 700 kg / 2320 mm against a target of 1.50, a fail in the wheels-only state. The near-zero rear wheel reaction is the same result seen from the support side.
 
-<!-- IMAGE SLOT — Stability chart and map (wheels) -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_07_Stability.png -->
-<!-- ![Stability factor at each chart point and the factor map](figures/wheels/fig_07_Stability.png) -->
-
-> _Attach `figures/wheels/fig_07_Stability.png` — from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\` (stability FoS at each chart point, left; factor map across reach and load with the chart overlaid, right)._
+<img width="1623" height="963" alt="fig_07_Stability" src="https://github.com/user-attachments/assets/99faa574-1669-4649-b314-62a4e866eb4e" />
+ — stability FoS at each chart point (left) and the factor map across reach and load with the chart overlaid (right).
 
 ---
 
@@ -366,25 +336,20 @@ The plane-frame solver was run for all three chart points. The model confirms th
 
 The frame FoS values are quoted against yield directly (275 / peak stress), which is why they read slightly higher than the 1.5-target factors in the hand calc. Peak frame stress at the governing case is 272.7 MPa at the column, against yield 275 MPa and the 183 MPa allowable.
 
-<!-- IMAGE SLOTS — Frame deformed shape and stress distribution -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_03_Track_2_Deformed_Shape.png -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_04_Track_2_Stress_Distribution.png -->
-<!-- ![Frame deformed shape, scaled x20](figures/wheels/fig_03_Track_2_Deformed_Shape.png) -->
-<!-- ![Frame stress distribution](figures/wheels/fig_04_Track_2_Stress_Distribution.png) -->
-
-> _Attach `figures/wheels/fig_03_Track_2_Deformed_Shape.png` and `figures/wheels/fig_04_Track_2_Stress_Distribution.png` — both from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\` (deformed shape, scale x20, tip 102.68 mm; frame stress, peak 272.7 MPa at the column)._
+<img width="1688" height="1037" alt="fig_04_Track_2_Stress_Distribution" src="https://github.com/user-attachments/assets/0c43cdbc-96f1-401c-9906-adc4713df70f" />
+<img width="1645" height="1099" alt="fig_03_Track_2_Deformed_Shape" src="https://github.com/user-attachments/assets/f464e8a6-0785-4fd1-8546-9d0b25b2a6b2" />
+ (deformed shape, scale x20, tip 102.68 mm; frame stress, peak 272.7 MPa at the column).
 
 ### Operating envelope sweep
 
 The model also sweeps the boom through its luffing range and tracks the boom-root stress and factor of safety against the chart capacity at each angle. The capacity drops at the reaches where stress approaches the allowable line.
 
-<!-- IMAGE SLOTS — Operating envelope sweep + animation -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_10_Crane_Operation_Animation.png -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\crane_animation (gif) -->
-<!-- ![Operating-envelope sweep](figures/wheels/fig_10_Crane_Operation_Animation.png) -->
-<!-- ![Crane operation animation](figures/wheels/crane_animation.gif) -->
+<img width="2319" height="1313" alt="fig_10_Crane_Operation_Animation" src="https://github.com/user-attachments/assets/d9a544fb-47ca-4a8a-988d-3dd2d896e317" />
 
-> _Attach `figures/wheels/fig_10_Crane_Operation_Animation.png` and `figures/wheels/crane_animation.gif` — both from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\`._
+
+https://github.com/user-attachments/assets/bd71dd9d-267f-4e7a-813a-6e759addc7b8
+
+
 
 ---
 
@@ -398,11 +363,8 @@ The model also sweeps the boom through its luffing range and tracks the boom-roo
 
 The deflection gap is expected and not an error. The hand figure is boom bending alone, treating the column top as rigid. The frame figure adds the column bending and the base flexibility, so the tip moves much further. For a stress verdict the moment and stress agreement is what matters, and that is tight.
 
-<!-- IMAGE SLOT — Method cross-check -->
-<!-- Source: JIB_CRANE_C1_v3\verification_outputs_20260613_145515\fig_09_T1_vs_T2_cross_check.png -->
-<!-- ![Method cross-check, hand calc vs in-MATLAB FEA](figures/wheels/fig_09_T1_vs_T2_cross_check.png) -->
-
-> _Attach `figures/wheels/fig_09_T1_vs_T2_cross_check.png` — from `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\` (side-by-side comparison of the two methods)._
+<img width="1636" height="893" alt="fig_09_T1_vs_T2_cross_check" src="https://github.com/user-attachments/assets/c74d64c6-1183-41ae-8f91-bf0f35009943" />
+ — side-by-side comparison of the two methods.
 
 ---
 
@@ -450,11 +412,8 @@ The deployed legs form a # arrangement: two fore-aft rails crossed by a front an
 
 The 980 mm front line follows from two agreeing readings: the base top-view chain places the slew centre about 1076 mm behind the front edge, and the warning plate marks 420 mm at the front, so the line sits at 1400 minus 420, or 980 mm. The deployed track is read off the updated general-arrangement plan view at 2500 mm foot-to-foot, replacing the 2376 mm earlier derived from the bare leg-arm projection.
 
-<!-- IMAGE SLOT — Deployed footprint plan -->
-<!-- Source: JIB_CRANE_C2_v3\verification_outputs_20260613_150046\fig_01_Free_Body_Geometry.png -->
-<!-- ![Deployed footprint in plan](figures/deployed/fig_01_Free_Body_Geometry.png) -->
-
-> _Attach `figures/deployed/fig_01_Free_Body_Geometry.png` — from `JIB_CRANE_C2_v3\verification_outputs_20260613_150046\` (two rails plus four transverse legs, # arrangement; 2500 mm track, 980 mm front line)._
+<img width="1628" height="938" alt="fig_01_Free_Body_Geometry" src="https://github.com/user-attachments/assets/dc4c330b-1d5b-4c91-ad69-23973527b1cd" />
+ — two rails plus four transverse legs (# arrangement); 2500 mm track, 980 mm front line.
 
 ### Forward stability (deployed)
 
@@ -489,11 +448,8 @@ Overturning balance about a side foot line
 
 The close-in lift is steady, but the mid and far points fall below target. Solving the balance for 1.50 at the governing mid point gives a half-track of 1392 mm, a full track of 2784 mm. The 2500 mm drawn track is about 284 mm short, so the deployed width must be confirmed on the machine and, if the feet adjust, set to at least 2784 mm before slewing at mid or long reach. The manufacturer figure marks the deployed width as adjustable up to roughly 2870 mm.
 
-<!-- IMAGE SLOT — Sideways stability vs track (deployed) -->
-<!-- Source: JIB_CRANE_C2_v3\verification_outputs_20260613_150046\fig_07_Stability.png -->
-<!-- ![Sideways stability against deployed track](figures/deployed/fig_07_Stability.png) -->
-
-> _Attach `figures/deployed/fig_07_Stability.png` — from `JIB_CRANE_C2_v3\verification_outputs_20260613_150046\` (2500 mm sits below the 1.50 target; about 2784 mm is needed)._
+<img width="1623" height="963" alt="fig_07_Stability" src="https://github.com/user-attachments/assets/be71481b-4953-43dc-ae2f-7d1f55c54465" />
+ — 2500 mm sits below the 1.50 target; about 2784 mm is needed.
 
 ### Deployed leg member
 
@@ -546,13 +502,9 @@ The Ø40 Base DETAIL-4 cylinder pin clears its check at 4.11 on Q235. The slewin
 
 The legs widen the track and ease the leg member, so sideways tipping becomes possible to manage and the leg passes. Forward tipping, the column, the weld, the boom and the outrigger arm are the same in both states, because the legs do not act on them and the material is common to both.
 
-<!-- IMAGE SLOTS — Deployed-state stability bars + Q235 FoS summary -->
-<!-- Source: JIB_CRANE_C2_v3\verification_outputs_20260613_150046\fig_07_Stability.png -->
-<!-- Source: JIB_CRANE_C2_v3\verification_outputs_20260613_150046\fig_08_FoS_Summary.png -->
-<!-- ![Stability in the deployed state](figures/deployed/fig_07_Stability.png) -->
-<!-- ![Factor-of-safety summary on Q235](figures/deployed/fig_08_FoS_Summary.png) -->
-
-> _Attach `figures/deployed/fig_07_Stability.png` and `figures/deployed/fig_08_FoS_Summary.png` — both from `JIB_CRANE_C2_v3\verification_outputs_20260613_150046\` (deployed-state stability bars; Q235 factor-of-safety summary, column buckling bar 67.6 capped for readability)._
+<img width="1904" height="1032" alt="fig_08_FoS_Summary" src="https://github.com/user-attachments/assets/e91bf18c-5327-4683-aef0-9c792d8ea170" />
+<img width="1623" height="963" alt="fig_07_Stability" src="https://github.com/user-attachments/assets/613eab4c-be0e-439d-9db2-fb1570a4ad97" />
+ (deployed-state stability bars; Q235 factor-of-safety summary, column buckling bar 67.6 capped for readability).
 
 ---
 
@@ -657,26 +609,24 @@ In all cases the deployed track must be confirmed to at least 2784 mm before the
 
 ## Project Files
 
-| File | Description |
+| File | Location |
 |---|---|
-| `jib_crane_verification_C1_v3.m` | Wheels-only parametric MATLAB R2026a script, latest (`JIB_CRANE_C1_v3\`) |
-| `jib_crane_verification_C2_v3.m` | Deployed-outrigger parametric MATLAB R2026a script, latest, Q235 / 2500 mm track (`JIB_CRANE_C2_v3\`) |
-| `Jib_Crane_Combined_Structural_Verification_Rev4.pdf` | Combined wheels-only and deployed verification, single submission |
-| `Jib_Crane_Combined_Structural_Verification_Rev5.pdf` | Combined verification, latest revision |
-| `Jib_Crane_Deployed_Outrigger_Verification_RevC.pdf` | Deployed-outrigger stability and leg-member check on Q235 (`JIB_CRANE_C2_v3\`) |
-| `Jib_Crane_Revision_Note_RevB_to_RevC.pdf` | Change note: S275 to Q235, 2376 mm to 2500 mm track (`JIB_CRANE_C2_v3\`) |
-| `Jib_Crane_Load_Re-Rating_Report_RevR2.pdf` | Reduced SWL chart with operating limitations |
-| `console_log.txt` | Full run log including the factor-of-safety tables (in each `verification_outputs_*` subfolder) |
-| `workspace.mat` | Saved variables for re-plotting without re-running (in each `verification_outputs_*` subfolder) |
-| `figures/wheels/`, `figures/deployed/` | Result plots, figures and animation (see Figure Index) |
+| `jib_crane_verification_C1_v3.m` | `JIB_CRANE_C1_v3\` — wheels-only parametric MATLAB R2026a script, latest |
+| `jib_crane_verification_C2_v3.m` | `JIB_CRANE_C2_v3\` — deployed-outrigger script, latest, Q235 / 2500 mm track |
+| `Jib_Crane_Combined_Structural_Verification_Rev4.pdf` | `JIB_CRANE\` — combined wheels-only and deployed verification |
+| `Jib_Crane_Combined_Structural_Verification_Rev5.pdf` | `JIB_CRANE\` — combined verification, latest revision |
+| `Jib_Crane_Deployed_Outrigger_Verification_RevC.pdf` | `JIB_CRANE_C2_v3\` — deployed-outrigger check on Q235 |
+| `Jib_Crane_Revision_Note_RevB_to_RevC.pdf` | `JIB_CRANE_C2_v3\` — change note: S275 to Q235, 2376 to 2500 mm track |
+| `Jib_Crane_Load_Re-Rating_Report_RevR2.pdf` | `JIB_CRANE\` — reduced SWL chart with operating limitations |
+| `console_log.txt`, `workspace.mat` | In each `verification_outputs_*` subfolder — run log and saved variables |
 
 ---
 
 ## Figure Index
 
-The two source subfolders are produced by the latest runs of each script. The wheels-only and deployed runs share filenames, so they are split into two repo folders.
+Figures are attached directly into this README from the PC (drag-and-drop in the GitHub editor). The two source subfolders below are the latest run of each script. The wheels-only and deployed runs share filenames, so each is taken from its own subfolder.
 
-### Wheels-only / combined — source: `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\` → repo `figures/wheels/`
+### Wheels-only / combined — source: `JIB_CRANE_C1_v3\verification_outputs_20260613_145515\`
 
 | Figure | File | Shows |
 |---|---|---|
@@ -691,10 +641,8 @@ The two source subfolders are produced by the latest runs of each script. The wh
 | Fig 9 | `fig_09_T1_vs_T2_cross_check` | Method cross-check, hand calc vs FEA |
 | Fig 10 | `fig_10_Crane_Operation_Animation` | Operating-envelope sweep |
 | Animation | `crane_animation` | Luffing-cycle animation |
-| Log | `console_log.txt` | Full run log |
-| Data | `workspace.mat` | Saved variables for re-plotting |
 
-### Deployed-outrigger — source: `JIB_CRANE_C2_v3\verification_outputs_20260613_150046\` → repo `figures/deployed/`
+### Deployed-outrigger — source: `JIB_CRANE_C2_v3\verification_outputs_20260613_150046\`
 
 | Figure | File | Shows |
 |---|---|---|
@@ -702,7 +650,7 @@ The two source subfolders are produced by the latest runs of each script. The wh
 | Fig 7 | `fig_07_Stability` | Sideways stability vs track / deployed-state stability bars |
 | Fig 8 | `fig_08_FoS_Summary` | Factor-of-safety summary on Q235 |
 
-> The deployed run also writes the full `fig_01`–`fig_10` set, `crane_animation`, `console_log.txt` and `workspace.mat`; only the three figures referenced in the deployed sections are listed above. Earlier runs are available under `JIB_CRANE_C1\…_20260527_200459\` (note the `fig_02`/`fig_03` swap), `JIB_CRANE_C1_v2\…_20260609_111022\`, `JIB_CRANE_C2_v1\…_20260610_030747\` and `JIB_CRANE_C2_v2\…_20260611_045424\`.
+> The deployed run also writes the full `fig_01`–`fig_10` set, `crane_animation`, `console_log.txt` and `workspace.mat`; only the three figures used in the deployed sections are listed above. Earlier runs are available under `JIB_CRANE_C1\…_20260527_200459\` (note the `fig_02`/`fig_03` swap), `JIB_CRANE_C1_v2\…_20260609_111022\`, `JIB_CRANE_C2_v1\…_20260610_030747\` and `JIB_CRANE_C2_v2\…_20260611_045424\`.
 
 ---
 
